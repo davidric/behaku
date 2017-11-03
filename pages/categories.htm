@@ -1,0 +1,248 @@
+title = "Category"
+url = "/category/:slug"
+layout = "default"
+meta_title = "Categories"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Behaku\Products\Models\Category"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "cat"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+<div class="categories">
+	<div class="site-nav">
+		<div class="container">
+			<div class="snt-1">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Bras</a></li>
+				</ul>	
+			</div>
+			<div class="snt-2">BRA COLLECTION</div>
+		</div>
+	</div>
+	<div class="slider-categories">
+		<img src="{{'assets/img/sample/image-slider-01.jpg'|theme}}" srcset="{{'assets/img/sample/image-slider-01@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-slider-01@3x.jpg 3x'|theme}}" class="image-slider-cat">
+	</div>
+	<div class="cat-rect-1">
+		<div class="container">
+			<div class="cr1t1">623 Items Found</div>
+			<div class="cr1t2">
+				<div class="cr1t2-1">Sort by</div>
+				<div class="cr1t2-2">
+					<div class="ui selection dropdown">
+					  <input type="hidden" name="gender">
+					  <i class="dropdown icon"></i>
+					  <div class="default text">Best Sellers</div>
+					  <div class="menu">
+					    <div class="item" data-value="0">Lowest price</div>
+					    <div class="item" data-value="1">Highest price</div>
+					    <div class="item" data-value="2">Latest product</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="best-frames">
+		<div class="container">
+			<div class="ui grid">
+				<div class="five column row">
+					{% for product in record.products %}
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{product.poster.path}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp {{product.price|wordwrap(3, ",")}} </div>
+								<div class="frame-1-description">{{product.name}}</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			    {% endfor %}
+
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{'assets/img/sample/image-1.jpg'|theme}}" srcset="{{'assets/img/sample/image-1@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-1@3x.jpg 3x'|theme}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp325.000</div>
+								<div class="frame-1-description">Rosaline Defyant Reversible Dot Shorts</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{'assets/img/sample/image-2.jpg'|theme}}" srcset="{{'assets/img/sample/image-2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-2@3x.jpg 3x'|theme}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp325.000</div>
+								<div class="frame-1-description">Rosaline Padded Wirefree Full Coverage Crossover</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{'assets/img/sample/image-3.jpg'|theme}}" srcset="{{'assets/img/sample/image-3@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-3@3x.jpg 3x'|theme}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp325.000</div>
+								<div class="frame-1-description">Behaku Cotton Wirefree Cut N Sew Bra- Purple</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{'assets/img/sample/image-4.jpg'|theme}}" srcset="{{'assets/img/sample/image-4@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-4@3x.jpg 3x'|theme}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp380.000</div>
+								<div class="frame-1-description">Behaku Cotton Wirefree Cut N Sew Bra- Purple</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="frame-1">
+							<img src="{{'assets/img/sample/image-2.jpg'|theme}}" srcset="{{'assets/img/sample/image-2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-2@3x.jpg 3x'|theme}}" class="image-1">
+							<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
+							<div class="Rectangle-7">
+								<div class="frame-1-price">Rp280.000</div>
+								<div class="frame-1-description">Rosaline Defyant Reversible Dot Shorts</div>
+								<div class="frame-1-stars">
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="frame-1-star">
+										<i class="fa fa-star-o"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+{% put scripts %}
+<script>
+	$('.ui.dropdown')
+  .dropdown();
+</script>
+{% endput %}
+
+
+
+
+
+
+    <!-- <h3>{{ attribute(record, displayColumn) }}</h3>
+    {% for product in record.products %}
+      <a href="/products/h/{{product.slug}}">{{product.name}}</a><br>
+    {% endfor %} -->
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

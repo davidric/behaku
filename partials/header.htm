@@ -1,0 +1,46 @@
+[staticMenu]
+code = "main-menu"
+
+[viewBag]
+==
+<?php
+
+function onStart() {
+    
+}
+?>
+==
+<div class="header">
+	<div class="Rectangle-2">
+		<div class="container">
+			<div class="-Off-ALL-Bras-3">40% Off ALL Bras | 3 FREE Panties when you buy 2 DETAILS | Sexy Sale up to 70% Off</div>
+			<div class="icon-rect-2">
+				<img src="{{'assets/img/icon/shop-anticon.png'|theme}}" srcset="{{'assets/img/icon/shop-anticon@2x.png 2x'|theme}}, {{'assets/img/icon/shop-anticon@3x.png 3x'|theme}}" class="shop---anticon">
+				<img src="{{'assets/img/icon/location-pin-simple-line-icons.png'|theme}}"
+	     srcset="{{'assets/img/icon/location-pin-simple-line-icons@2x.png 2x'|theme}}", {{'assets/img/icon/location-pin-simple-line-icons@3x.png 3x'|theme}}" class="location-pin---simple-line-icons">
+	     <img src="{{'assets/img/icon/phone-simple-line-icons.png'|theme}}"
+	     srcset="{{'assets/img/icon/phone-simple-line-icons@2x.png 2x'|theme}}", {{'assets/img/icon/phone-simple-line-icons@3x.png 3x'|theme}}" class="phone---simple-line-icons">
+	     <span class="phone-numb">0812 4820 4538</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	<div class="Rectangle">
+		<div class="container">
+			<img src="{{'assets/img/icon/menu.svg'|theme}}" class="menu">
+			<div class="Behaku">Behaku</div>
+			<div class="icon-rect">
+				<!-- <input class="search-input" type="text" name="username" placeholder="Search products..."> -->
+				<!-- <img src="{{'assets/img/icon/search-font-awesome.png'|theme}}" class="search---FontAwesome">
+				<img src="{{'assets/img/icon/user-simple-line-icons.png'|theme}}" class="User---simple-line-icons">
+				<img src="{{'/assets/img/icon/shopping-bag-font-awesome.png'|theme}}" class="shopping-bag---FontAwesome"> -->
+				<i class="fa fa-search"></i>
+				<i class="fa fa-user-o"></i>
+				<a href="{{ 'basket'|page }}"><i class="fa fa-shopping-cart"></i> <span id="jkshop-total-basket">{{ basket.total_price_formatted }}</span></a>
+			</div>
+		</div>
+	</div>
+	
+</div>

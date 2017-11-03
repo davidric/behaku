@@ -1,0 +1,22 @@
+title = "Item"
+url = "/item/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Behaku\Products\Models\Product"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+[myProductDetail]
+slug = "{{ :slug }}"
+brandPage = "brands"
+
+[myBreadcrumbsProduct]
+slug = "{{ :slug }}"
+category = "{{ :category }}"
+categoryPage = "products"
+==
+<!-- {% component "myBreadcrumbsProduct" %} -->
+{% component "myProductDetail" %}

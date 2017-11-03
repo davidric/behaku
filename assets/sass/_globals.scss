@@ -1,0 +1,123 @@
+/*@import 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css';*/
+@import '../../bootstrap/bootstrap.min.css';
+/*@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';*/
+@import '../../fonts/font-awesome/css/font-awesome.min.css';
+
+
+/* =======================================================================
+## ++ Globals
+========================================================================== */
+html{
+    font-size: 100%;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+    color: #566b78;
+    color: #494949;
+}
+
+body {
+    font-family: 'Lato',Helvetica,Arial,sans-serif;
+    font-family: Arial,sans-serif;
+    color: #434343;
+    color: #494949;
+    line-height: 1.42857143;
+    /*line-height: 1.7em;*/
+    /*color: #5D6769;*/
+    /*font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica Neue,sans-serif;
+    word-wrap: break-word;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;*/
+}
+
+/*.container{
+    max-width: 40em;
+    margin:0 auto;
+}*/
+
+/*.container {
+        width: 1130px;
+        margin: 0 auto;
+    }*/
+
+*{
+    box-sizing:border-box;
+}
+
+a {
+    color: #e81c4f;
+    color: #ff9966;
+}
+
+a:hover, a:focus {
+    color: #ff9966;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Gallery
+|--------------------------------------------------------------------------
+*/
+
+.gallery{
+    padding:20px 15px;
+    background: #efefef;
+    border:1px solid #ccc;
+    border-radius:3px;
+    li{
+        float: left;
+        margin:5px;
+    }
+
+    img, a{
+        display: block;
+    }
+}
+
+
+/* =======================================================================
+## ++ Cleafix
+========================================================================== */
+
+/* float clearing for IE6 */
+* html .clearfix{
+ height: 1%;
+ overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+ min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0;
+}
+
+.clr{clear:both;}
+.clr{content:"test";}
+
+
+/*
+|--------------------------------------------------------------------------
+| Media Query
+|--------------------------------------------------------------------------
+*/
+
+
+/* Custom semantic */
+body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+}

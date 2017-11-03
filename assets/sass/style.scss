@@ -1,0 +1,23 @@
+/* Vendor */
+/*@import "../semantic-ui-sass/semantic-ui";*/
+
+
+/* Setup */
+/*@import "reset";
+@import "mixins";
+@import "variables";
+@import "fonts";
+@import "globals";*/
+
+
+/* Custom parts */
+@import "fonts";
+@import "header";
+@import "homepage";
+@import "pages";
+@import "footer";
+@import "fonts";
+@import "categories";
+@import "item";
+@import "contact";
+@import "slick";

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Arimo-Bold';
+  src: url("../../fonts/css/fonts/Arimo/Arimo-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'time sans serif';
+  src: url("../../css/fonts/Times-Sans-Serif/Times-Sans-Serif.ttf") format('truetype');
+}
+/*
+@font-face {
+  font-family: '_H_HelveticaNeueInterface';
+  src: url("../../fonts/css/fonts/Helvetica-Neue-Interface/_H_HelveticaNeueInterface.ttf") format('truetype');
+}*/
+
+@font-face {
+    font-family: 'Helvetica-Neue-Interface';
+    src:url('../../css/fonts/webfonts_Helvetica-Neue-Interface/Helvetica-Neue-Interface.ttf.woff') format('woff'),
+        url('../../css/fonts/webfonts_Helvetica-Neue-Interface/Helvetica-Neue-Interface.ttf.svg#Helvetica-Neue-Interface') format('svg'),
+        url('../../css/fonts/webfonts_Helvetica-Neue-Interface/Helvetica-Neue-Interface.ttf.eot'),
+        url('../../css/fonts/webfonts_Helvetica-Neue-Interface/Helvetica-Neue-Interface.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

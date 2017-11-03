@@ -1,0 +1,61 @@
+*, :after, :before {
+	box-sizing: inherit;
+}
+
+/* =======================================================================
+## ++ Cleafix
+========================================================================== */
+
+/* float clearing for IE6 */
+* html .clearfix{
+ height: 1%;
+ overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+ min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0;
+}
+
+/* =======================================================================
+## Custom
+========================================================================== */
+
+.container {
+    width: 1250px;
+    /*width: 990px;*/
+    margin: 0 auto;
+}
+
+.item-container {
+	width: 1048px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body {
+	color: #575757;
+	font-family: Helvetica;
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+	border-top: 1px solid #dfdfdf;
+}
+
+.links {
+	color: #f5a623;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
