@@ -6,13 +6,15 @@ is_hidden = 0
 [myProducts]
 category = "{{ :category }}"
 pageNumber = "{{ :page }}"
-perPage = 5
-orderBy = "title"
-sort = "asc"
-productPage = "product"
+perPage = 12
+orderBy = "id"
+sort = "desc"
+productPage = "basket"
 
 [myBreadcrumbsCategory]
 category = "{{ :category }}"
 ==
-{% component "myBreadcrumbsCategory" %}
-{% component "myProducts" %}
+<div class="category-page">
+	{% component "myBreadcrumbsCategory" %}
+	{% component "myProducts" %}
+</div>

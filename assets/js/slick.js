@@ -1998,6 +1998,7 @@
             position = -position;
         }
         x = _.positionProp == 'left' ? Math.ceil(position) + 'px' : '0px';
+        // x = _.positionProp == 'left' ? Math.ceil(position) - 37 + 'px' : '0px';
         y = _.positionProp == 'top' ? Math.ceil(position) + 'px' : '0px';
 
         positionProps[_.positionProp] = position;
@@ -2042,6 +2043,8 @@
 
         if (_.options.vertical === false && _.options.variableWidth === false) {
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
+            _.slideWidth = 255;
+            console.log(_.slideWidth);
             _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
 
         } else if (_.options.variableWidth === true) {
