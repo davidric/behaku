@@ -43,6 +43,11 @@
 	margin: 0 auto;
 }
 
+.profile-container {
+	width: 720px;
+	margin: 0 auto;
+}
+
 body {
 	color: #575757;
 	font-family: Helvetica;
@@ -53,7 +58,11 @@ body {
 }
 
 .links {
+	cursor: pointer;
 	color: #f5a623;
+	&:hover {
+		color: #f5a623;
+	}
 }
 
 .cursor-pointer {
@@ -62,4 +71,17 @@ body {
 
 .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
 	background: #f5a623 !important;
+}
+
+.title-2 {
+	font-family: Palatino;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title-4 {
+	font-size: 23px;
+  line-height: 1.3;
+  color: #a5a5a5;
+  font-weight: normal;
 }

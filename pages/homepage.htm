@@ -3,23 +3,34 @@ url = "/"
 layout = "default"
 meta_title = "Behaku"
 is_hidden = 0
+
+[myProductsList]
+take = 12
+orderBy = "id"
+sort = "desc"
+onSaleOnly = 1
+productPage = "product"
+
+[Jiri\Subscribe\Components\SubscribeForm subscribeform]
+==
+<?php
+	use Jiri\Jkshop\Models\Category;
+	function onStart(){
+		$this['category'] = Category::orderBy('id','desc')->paginate(3);
+		$this['categories'] = Category::get();
+	}
+?>
 ==
 <div class="homepage">
 	<div class="rect-nav">
 		<div class="container">
 			<div class="ui grid">
 				<div class="twelve column row">
-					<div class="column">BRANDS</div>
 					<div class="column">VALUE PACKS</div>
-					<div class="column">BRAS</div>
-					<div class="column">PANTIES</div>
-					<div class="column">SETS</div>
-					<div class="column">SHAPEWEAR</div>
-					<div class="column">NIGHTWEAR</div>
-					<div class="column">APPAREL</div>
-					<div class="column">ACTIVEWEAR</div>
-					<div class="column">SWIM & BEACH</div>
-					<div class="column">ACCESSORIES</div>
+					<div class="column">BRAND</div>
+					{% for cats in categories %}
+					<div class="column"><a href="/oct/{{cats.slug}}">{{cats.title}}</a></div>
+					{% endfor %}
 					<div class="column">SALE%</div>
 				</div>
 			</div>
@@ -36,7 +47,6 @@ is_hidden = 0
 	</div>
 
 	<div class="best-seller">
-		<i class="icon fa-angle-left"></i>
 		<div class="container">
 			<div class="intro">
 				<div class="title">
@@ -49,148 +59,29 @@ is_hidden = 0
 				Shop our latest trending products and discover our latest style stories
 			</div>
 			<div class="best-frames">
-				<div class="ui grid">
-					<div class="five column row">
-						<div class="column">
-							<div class="frame-1">
-								<img src="{{'assets/img/sample/image-1.jpg'|theme}}" srcset="{{'assets/img/sample/image-1@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-1@3x.jpg 3x'|theme}}" class="image-1">
-								<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
-								<div class="Rectangle-7">
-									<div class="frame-1-price">Rp325.000</div>
-									<div class="frame-1-description">Rosaline Defyant Reversible Dot Shorts</div>
-									<div class="frame-1-stars">
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star-o"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="frame-1">
-								<img src="{{'assets/img/sample/image-2.jpg'|theme}}" srcset="{{'assets/img/sample/image-2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-2@3x.jpg 3x'|theme}}" class="image-1">
-								<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
-								<div class="Rectangle-7">
-									<div class="frame-1-price">Rp325.000</div>
-									<div class="frame-1-description">Rosaline Padded Wirefree Full Coverage Crossover</div>
-									<div class="frame-1-stars">
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star-o"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="frame-1">
-								<img src="{{'assets/img/sample/image-3.jpg'|theme}}" srcset="{{'assets/img/sample/image-3@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-3@3x.jpg 3x'|theme}}" class="image-1">
-								<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
-								<div class="Rectangle-7">
-									<div class="frame-1-price">Rp325.000</div>
-									<div class="frame-1-description">Behaku Cotton Wirefree Cut N Sew Bra- Purple</div>
-									<div class="frame-1-stars">
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star-o"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="frame-1">
-								<img src="{{'assets/img/sample/image-4.jpg'|theme}}" srcset="{{'assets/img/sample/image-4@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-4@3x.jpg 3x'|theme}}" class="image-1">
-								<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
-								<div class="Rectangle-7">
-									<div class="frame-1-price">Rp380.000</div>
-									<div class="frame-1-description">Behaku Cotton Wirefree Cut N Sew Bra- Purple</div>
-									<div class="frame-1-stars">
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star-o"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="frame-1">
-								<img src="{{'assets/img/sample/image-2.jpg'|theme}}" srcset="{{'assets/img/sample/image-2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-2@3x.jpg 3x'|theme}}" class="image-1">
-								<img src="{{'assets/img/icon/heart-o-font-awesome.png'|theme}}" srcset="{{'assets/img/icon/heart-o-font-awesome@2x.png 2x'|theme}}", "{{'assets/img/icon/heart-o-font-awesome@3x.png 3x'|theme}}" class="heart-o---FontAwesome">
-								<div class="Rectangle-7">
-									<div class="frame-1-price">Rp280.000</div>
-									<div class="frame-1-description">Rosaline Defyant Reversible Dot Shorts</div>
-									<div class="frame-1-stars">
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="frame-1-star">
-											<i class="fa fa-star-o"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<section class="related-products slider">
+	        {% set index = 0 %}
+          {% for key, product in productsPagination.items()|slice(productsPagination.perPage()*(productsPagination.currentPage()-1), productsPagination.perPage()) %}
+          {% set index = index+1 %}
+            <div class="column">
+              <div class="frame-1">
+                {% if product.getMainImage %}
+                <a href="/oct/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">
+                  <img src="{{ product.getMainImage.path }}" class="image-1 cursor-pointer">
+                </a>
+                {% endif %}
+                <div class="Rectangle-7">
+                  <div class="frame-1-price">{{ product.getFinalPriceFormated }}</div>
+                  <div class="frame-1-description cursor-pointer"><a href="/oct/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">{{ product.title }}</a></div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="no-data">no products</div>
+          {% endfor %}
+        </section>
 			</div>
 		</div>
-		<i class="icon fa-angle-right"></i>
 	</div>
 
 	<div class="the-brand-boutique">
@@ -213,48 +104,45 @@ is_hidden = 0
 								<div class="tbb-text-001">Your Outfit BBF!</div>
 								<div class="tbb-text-002">Panties Wear Shapewear</div>
 								<div class="tbb-text-003">Start from</div>
-								<div class="tbb-text-004">Rp250.000</div>
-								<div class="btn-01">SHOP PANTIES <i class="icon fa-shopping-bag"></i></div>
+								<div class="tbb-text-004">Rp100.000</div>
+								<a href="/oct/panties"><div class="btn-01">SHOP PANTIES <i class="icon fa-shopping-bag"></i></div></a>
 							</div>
 						</div>
 					</div>
 					<div class="column">
 						<div class="ui one column grid">
 						  <div class="two column row">
-						    <div class="column">
+						  	{% for key, cat in category %}
+						  	{% if key < 2 %}
+						  	<div class="column">
 						    	<div class="frame-2">
 						    		<div class="frame-2-container">
-						    			<img src="{{'assets/img/sample/image-6.2.jpg'|theme}}" srcset="{{'assets/img/sample/image-6.2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-6.2@3x.jpg 3x'|theme}}" class="image-6">
+						    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
 							    		<div class="frame-2-content">
-							    			<div class="f2c-1">APPAREL</div>
-							    			<div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div>
+							    			<a href="/oct/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+							    			<a href="/oct/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
 							    		</div>
 						    		</div>
 						    	</div>
 						    </div>
-						    <div class="column">
-						    	<div class="frame-2">
-						    		<div class="frame-2-container">
-						    			<img src="{{'assets/img/sample/image-7.2.jpg'|theme}}" srcset="{{'assets/img/sample/image-7.2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-7.2@3x.jpg 3x'|theme}}" class="image-6">
-							    		<div class="frame-2-content">
-							    			<div class="f2c-1">BRAS</div>
-							    			<div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div>
-							    		</div>
-						    		</div>
-						    	</div>
-						    </div>
+						    {% endif %}
+								{% endfor %}
 						  </div>
+						  {% for key, cat in category %}
+					  	{% if cat.slug == 'nightwear' %}
 						  <div class="column">
 						  	<div class="frame-2">
 						  		<div class="frame-2-container">
-					    			<img src="{{'assets/img/sample/image-01.2.jpg'|theme}}" srcset="{{'assets/img/sample/image-01.2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-01.2@3x.jpg 3x'|theme}}" class="image-6">
+					    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
 						    		<div class="frame-2-content">
-						    			<div class="f2c-1">NIGHTWEAR</div>
-						    			<div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div>
+						    			<a href="/oct/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+						    			<a href="/oct/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
 						    		</div>
 					    		</div>
 						  	</div>
 						  </div>
+						  {% endif %}
+							{% endfor %}
 						</div>
 					</div>
 				</div>
@@ -352,7 +240,8 @@ is_hidden = 0
 			</div>
 		</div>
 	</div>
-	<div class="rectangle-6">
+	{% component 'subscribeform' %}
+	<!-- <div class="rectangle-6">
 		<div class="container">
 			<div class="r6-left">
 				<div class="r6-text-01">Sign up to receive 10% off* your first order</div>
@@ -365,4 +254,18 @@ is_hidden = 0
 			</div>
 		</div>
 		<div class="clearfix"></div>
-	</div>
+	</div> -->
+
+	{% put scripts %}
+		<script type="text/javascript">
+		  $(document).on('ready', function() {
+		    $(".related-products").slick({
+		      dots: true,
+		      infinite: true,
+		      centerMode: false,
+		      slidesToShow: 5,
+		    });
+		  });
+		</script>
+	{% endput %}
+</div>

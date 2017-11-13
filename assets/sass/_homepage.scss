@@ -2,6 +2,7 @@
   display: block;
   height: 32px;
   border-bottom: solid 1px #dfdfdf;
+  text-transform: uppercase;
 }
 
 .rect-nav .container {
@@ -413,6 +414,12 @@ h2 {
   text-align: left;
   color: #ffffff;
   padding-left: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .ui.divided.grid:not([class*="vertically divided"])>.row>.column {
@@ -482,6 +489,8 @@ h2 {
   font-weight: bold;
   text-align: left;
   color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .tbb-frames .f2c-2 {

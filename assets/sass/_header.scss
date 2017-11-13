@@ -53,6 +53,9 @@
   text-align: left;
   color: #ee8484;
   display: inline-block;
+  a {
+    color: #ee8484;
+  }
 }
 
 .icon-rect {
@@ -64,12 +67,13 @@
   margin-right: 39px;
 }
 
-.search---FontAwesome, .User---simple-line-icons, .shopping-bag---FontAwesome, .header .icon-rect i {
+.search---FontAwesome, .User---simple-line-icons, .shopping-bag---FontAwesome, .header .icon-rect span {
   object-fit: contain;
   font-size: 15px;
   text-align: left;
   color: #575757;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header .icon-rect .fa-shopping-cart {
@@ -97,6 +101,33 @@
   text-align: center;
 }
 
+.rect-nav a {
+  color: #575757;
+}
+
 .header .icon-rect a {
   color: #575757;
+}
+
+[data-position="bottom left"][data-tooltip]:before {
+    left: 0;
+}
+
+[data-position="bottom left"][data-tooltip]:after {
+    left: -1rem;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown .circle-user.active {
+    color: #8BC43F;
+}
+
+.user-dropdown .circle-user, .icon-header .circle-user {
+    position: absolute;
+    top: -0.6rem;
+    left: 0.7rem;
+    font-size: 7px;
 }

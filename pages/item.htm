@@ -1,5 +1,5 @@
 title = "Item"
-url = "/item/:slug"
+url = "/:category/:slug"
 layout = "default"
 is_hidden = 0
 
@@ -11,7 +11,7 @@ displayColumn = "name"
 notFoundMessage = "Record not found"
 
 [myProducts]
-category = "bra"
+category = "{{:category}}"
 perPage = 12
 orderBy = "id"
 sort = "desc"

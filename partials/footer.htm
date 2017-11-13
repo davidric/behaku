@@ -1,4 +1,11 @@
 ==
+<?php
+  use Jiri\Jkshop\Models\Category;
+  function onStart(){
+    $this['categories'] = Category::get();
+  }
+?>
+==
 
 <div class="footer">
 	<div class="rectangle-1">
@@ -24,7 +31,7 @@
 	<div class="container">
 		<div class="ui grid">
 			<div class="four wide column">
-				<div class="Behaku">Behaku</div>
+				<div class="Behaku"><a href="/oct/">Behaku</a></div>
 				<div class="ft-1-1"> Buy Bras, Panties, Nightwear, Swimwear, Sportswear & Apparel from Behaku - The Online Lingerie & Fashion Destination in Indonesia
 				</div>
 				<div class="ft-1-2">
@@ -36,14 +43,9 @@
 				<div class="ft-2-1">SHOP BY CATEGORIES</div>
 				<div class="ft-2-2">
 					<ul>
-						<li><a href="">Bras</a></li>
-						<li><a href="">Panties</a></li>
-						<li><a href="">Sets</a></li>
-						<li><a href="">Sleepwear</a></li>
-						<li><a href="">Shapewear</a></li>
-						<li><a href="">Apparel</a></li>
-						<li><a href="">Swim & Beach</a></li>
-						<li><a href="">Accessories</a></li>
+						{% for cat in categories %}
+						<li><a href="/oct/{{cat.slug}}">{{cat.title}}</a></li>
+						{% endfor %}
 					</ul>
 				</div>
 			</div>
@@ -51,8 +53,8 @@
 				<div class="ft-3-1">HELP & SUPPORT</div>
 				<div class="ft-3-2">
 					<ul>
-						<li><a href="">Track/Return Order</a></li>
-						<li><a href="">Contact Us</a></li>
+						<!-- <li><a href="">Track/Return Order</a></li> -->
+						<li><a href="/oct/contact">Contact Us</a></li>
 						<li><a href="">FAQs</a></li>
 						<li><a href="">Shipping Policy</a></li>
 						<li><a href="">Returns Policy</a></li>

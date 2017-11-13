@@ -2,9 +2,13 @@ title = "Contact"
 url = "/contact"
 layout = "default"
 is_hidden = 0
+
+[Jiri\Contact\Components\ContactForm contactform]
 ==
 
-<div class="contact-page">
+{% component 'contactform' %}
+
+<!-- <div class="contact-page">
 	<div class="site-nav">
 		<div class="container">
 			<div class="snt-1">
@@ -76,4 +80,4 @@ is_hidden = 0
 		  <div class="btn-01">SEND MESSAGE</div>
 		</div>
 	</div>
-</div>
+</div> -->

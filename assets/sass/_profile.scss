@@ -1,0 +1,65 @@
+.signin-modal {
+  padding: 29px 92px 70px 92px;
+  text-align: center;
+  .ui.form {
+    text-align: left;
+    .form-group:first-child {
+      margin-top: 27px;
+    }
+    .btn-01 {
+      margin-top: 18px;
+      width: 100%;
+      text-transform: uppercase;    
+    }
+    label {
+      color: #575757;
+    }
+  }
+}
+
+.signin-modal .Shop-our-latest-tren {
+  color: #575757;
+  margin-top: 19px;
+  .links {
+    cursor: pointer;
+  }
+  &.accept-terms {
+    text-align: left;
+    color: #a5a5a5;
+  }
+}
+
+.profile-page {
+  padding-top: 38px;
+  padding-bottom: 108px;
+  .basic-field {
+    border-radius: 5px;
+    border: solid 1px #dfdfdf;
+    padding: 23px 35px 21px 32px;
+    margin-top: 8px;
+  }
+  .field-1 {
+    border-radius: 5px;
+    border: solid 1px #dfdfdf;
+    padding: 17px 12px;
+    font-size: 19px;
+    line-height: 1.58;
+    text-align: left;
+    color: #a5a5a5;
+    margin-top: 3px;
+    width: 100%;
+  }
+  label {
+    color: #a5a5a5 !important;
+  }
+  #change-password {
+    margin-bottom: 1em;
+  }
+  #change-password-field {
+    display: none;
+    margin-bottom: 1em;
+  }
+  .address-title {
+    margin-top: 46px;
+  }
+}

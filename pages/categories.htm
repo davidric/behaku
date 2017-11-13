@@ -1,5 +1,5 @@
 title = "Products"
-url = "/:category/:page?"
+url = "/:category"
 layout = "default"
 is_hidden = 0
 
@@ -15,6 +15,6 @@ productPage = "basket"
 category = "{{ :category }}"
 ==
 <div class="category-page">
-	{% component "myBreadcrumbsCategory" %}
+	<!-- {% component "myBreadcrumbsCategory" %} -->
 	{% component "myProducts" %}
 </div>

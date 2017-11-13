@@ -87,6 +87,10 @@
   display: inline-block;
 }
 
+.Behaku a {
+  color: #ee8484;
+}
+
 .icon-rect {
   float: right;
 }
@@ -96,13 +100,14 @@
   margin-right: 39px;
 }
 
-.search---FontAwesome, .User---simple-line-icons, .shopping-bag---FontAwesome, .header .icon-rect i {
+.search---FontAwesome, .User---simple-line-icons, .shopping-bag---FontAwesome, .header .icon-rect span {
   -o-object-fit: contain;
   object-fit: contain;
   font-size: 15px;
   text-align: left;
   color: #575757;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header .icon-rect .fa-shopping-cart {
@@ -130,14 +135,42 @@
   text-align: center;
 }
 
+.rect-nav a {
+  color: #575757;
+}
+
 .header .icon-rect a {
   color: #575757;
+}
+
+[data-position="bottom left"][data-tooltip]:before {
+  left: 0;
+}
+
+[data-position="bottom left"][data-tooltip]:after {
+  left: -1rem;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown .circle-user.active {
+  color: #8BC43F;
+}
+
+.user-dropdown .circle-user, .icon-header .circle-user {
+  position: absolute;
+  top: -0.6rem;
+  left: 0.7rem;
+  font-size: 7px;
 }
 
 .rect-nav {
   display: block;
   height: 32px;
   border-bottom: solid 1px #dfdfdf;
+  text-transform: uppercase;
 }
 
 .rect-nav .container {
@@ -565,6 +598,14 @@ h2 {
   padding-left: 30px;
 }
 
+.subscribe-submit:hover {
+  cursor: pointer;
+}
+
+.subscribe-submit:focus {
+  outline: none;
+}
+
 .ui.divided.grid:not([class*="vertically divided"]) > .row > .column {
   box-shadow: -2px 0 0 0 #ededed;
 }
@@ -637,6 +678,8 @@ h2 {
   font-weight: bold;
   text-align: left;
   color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .tbb-frames .f2c-2 {
@@ -710,6 +753,11 @@ h2 {
   margin: 0 auto;
 }
 
+.profile-container {
+  width: 720px;
+  margin: 0 auto;
+}
+
 body {
   color: #575757;
   font-family: Helvetica;
@@ -720,6 +768,11 @@ body {
 }
 
 .links {
+  cursor: pointer;
+  color: #f5a623;
+}
+
+.links:hover {
   color: #f5a623;
 }
 
@@ -729,6 +782,19 @@ body {
 
 .stripe-loading-indicator .stripe, .stripe-loading-indicator .stripe-loaded {
   background: #f5a623 !important;
+}
+
+.title-2 {
+  font-family: Palatino;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title-4 {
+  font-size: 23px;
+  line-height: 1.3;
+  color: #a5a5a5;
+  font-weight: normal;
 }
 
 .footer .rectangle-1 {
@@ -1411,6 +1477,11 @@ ul.slick-dots {
   margin: 0 auto;
 }
 
+.contact-page .ui.selection.dropdown {
+  min-height: 2.71428571em;
+  padding: .78571429em 2.1em .78571429em 1em;
+}
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1718,6 +1789,93 @@ ul.slick-dots {
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
+}
+
+.signin-modal {
+  padding: 29px 92px 70px 92px;
+  text-align: center;
+}
+
+.signin-modal .ui.form {
+  text-align: left;
+}
+
+.signin-modal .ui.form .form-group:first-child {
+  margin-top: 27px;
+}
+
+.signin-modal .ui.form .btn-01 {
+  margin-top: 18px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.signin-modal .ui.form label {
+  color: #575757;
+}
+
+.signin-modal .Shop-our-latest-tren {
+  color: #575757;
+  margin-top: 19px;
+}
+
+.signin-modal .Shop-our-latest-tren .links {
+  cursor: pointer;
+}
+
+.signin-modal .Shop-our-latest-tren.accept-terms {
+  text-align: left;
+  color: #a5a5a5;
+}
+
+.profile-page {
+  padding-top: 38px;
+  padding-bottom: 108px;
+}
+
+.profile-page .basic-field {
+  border-radius: 5px;
+  border: solid 1px #dfdfdf;
+  padding: 23px 35px 21px 32px;
+  margin-top: 8px;
+}
+
+.profile-page .field-1 {
+  border-radius: 5px;
+  border: solid 1px #dfdfdf;
+  padding: 17px 12px;
+  font-size: 19px;
+  line-height: 1.58;
+  text-align: left;
+  color: #a5a5a5;
+  margin-top: 3px;
+  width: 100%;
+}
+
+.profile-page label {
+  color: #a5a5a5 !important;
+}
+
+.profile-page #change-password {
+  margin-bottom: 1em;
+}
+
+.profile-page #change-password-field {
+  display: none;
+  margin-bottom: 1em;
+}
+
+.profile-page .address-title {
+  margin-top: 46px;
+}
+
+.my-orders-page {
+  margin-bottom: 96px;
+}
+
+.my-orders-page .title-2 {
+  margin-bottom: 0;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
