@@ -29,7 +29,7 @@ productPage = "product"
 					<div class="column">VALUE PACKS</div>
 					<div class="column">BRAND</div>
 					{% for cats in categories %}
-					<div class="column"><a href="/oct/{{cats.slug}}">{{cats.title}}</a></div>
+					<div class="column"><a href="/{{cats.slug}}">{{cats.title}}</a></div>
 					{% endfor %}
 					<div class="column">SALE%</div>
 				</div>
@@ -66,13 +66,13 @@ productPage = "product"
             <div class="column">
               <div class="frame-1">
                 {% if product.getMainImage %}
-                <a href="/oct/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">
+                <a href="/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">
                   <img src="{{ product.getMainImage.path }}" class="image-1 cursor-pointer">
                 </a>
                 {% endif %}
                 <div class="Rectangle-7">
                   <div class="frame-1-price">{{ product.getFinalPriceFormated }}</div>
-                  <div class="frame-1-description cursor-pointer"><a href="/oct/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">{{ product.title }}</a></div>
+                  <div class="frame-1-description cursor-pointer"><a href="/{% for cat in product.categories %}{{cat.slug}}{% endfor %}/{{product.slug}}">{{ product.title }}</a></div>
                 </div>
               </div>
             </div>
@@ -95,32 +95,44 @@ productPage = "product"
 				</div>
 				<div class="tb3">A curated collection of your favourites - Behaku, Enamor, Amante, Lovable, Jockey & more.</div>
 			</div>
+			<div class="tbb-title-tab">
+				<div class="intro">
+					<div class="title">
+						<div class="Line-1"></div>
+						<div class="best-title"><h2>Say Hello To The Brand Boutique!</h2></div>
+						<div class="Line-2"></div>
+					</div>
+				</div>
+				<div class="Shop-our-latest-tren">
+					A curated collection of your favourites - Behaku, Enamor, Amante, Lovable, Jockey & more.
+				</div>
+			</div>
 			<div class="tbb-frames">
-				<div class="ui two column grid">
-					<div class="column">
-						<div class="frame-1">
+				<div class="ui grid">
+					<div class="cat-home-frame ten wide tablet eight wide computer column">
+						<div class="frame-1 frame-317">
 							<img src="{{'assets/img/sample/image-5.2.jpg'|theme}}" srcset="{{'assets/img/sample/image-5.2@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-5.2@3x.jpg 3x'|theme}}" class="image-5">
 							<div class="tbb-text-01">
 								<div class="tbb-text-001">Your Outfit BBF!</div>
 								<div class="tbb-text-002">Panties Wear Shapewear</div>
 								<div class="tbb-text-003">Start from</div>
 								<div class="tbb-text-004">Rp100.000</div>
-								<a href="/oct/panties"><div class="btn-01">SHOP PANTIES <i class="icon fa-shopping-bag"></i></div></a>
+								<a href="/panties"><div class="btn-01">SHOP PANTIES <i class="icon fa-shopping-bag"></i></div></a>
 							</div>
 						</div>
 					</div>
-					<div class="column">
+					<div class="computer-column eight wide computer column">
 						<div class="ui one column grid">
 						  <div class="two column row">
 						  	{% for key, cat in category %}
 						  	{% if key < 2 %}
-						  	<div class="column">
+						  	<div class=" column">
 						    	<div class="frame-2">
 						    		<div class="frame-2-container">
 						    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
 							    		<div class="frame-2-content">
-							    			<a href="/oct/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
-							    			<a href="/oct/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
+							    			<a href="/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+							    			<a href="/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
 							    		</div>
 						    		</div>
 						    	</div>
@@ -135,8 +147,8 @@ productPage = "product"
 						  		<div class="frame-2-container">
 					    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
 						    		<div class="frame-2-content">
-						    			<a href="/oct/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
-						    			<a href="/oct/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
+						    			<a href="/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+						    			<a href="/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
 						    		</div>
 					    		</div>
 						  	</div>
@@ -144,6 +156,42 @@ productPage = "product"
 						  {% endif %}
 							{% endfor %}
 						</div>
+					</div>
+					<div id="responsive-js-2" class="tablet-column six wide tablet column">
+						<div class="ui one column grid">
+					  	{% for key, cat in category %}
+					  	{% if key < 2 %}
+					  	<div class="cat-home-frame column">
+					    	<div class="frame-2">
+					    		<div class="frame-2-container">
+					    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
+						    		<div class="frame-2-content">
+						    			<a href="/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+						    			<a href="/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
+						    		</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    {% endif %}
+							{% endfor %}
+						</div>
+					</div>
+					<div class="tablet-column sixteen wide tablet column">
+						{% for key, cat in category %}
+				  	{% if cat.slug == 'nightwear' %}
+					  <div class="column">
+					  	<div class="frame-2">
+					  		<div class="frame-2-container">
+				    			<img src="{% for cacat in cat.thumbnails %}{{cacat.path}}{% endfor %}" class="image-6">
+					    		<div class="frame-2-content">
+					    			<a href="/{{cat.slug}}"><div class="f2c-1">{{cat.title}}</div></a>
+					    			<a href="/{{cat.slug}}"><div class="f2c-2">SHOP NOW <i class="icon fa-shopping-bag"></i></div></a>
+					    		</div>
+				    		</div>
+					  	</div>
+					  </div>
+					  {% endif %}
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -163,8 +211,8 @@ productPage = "product"
 				What's new, our stores, customer speak and announcements
 			</div>
 			<div class="ui grid">
-				<div class="four column row">
-					<div class="column">
+				<div id ="responsive-js-1" class="four column row">
+					<div class="column article-column">
 						<div class="rectangle-8">
 							<div class="column">
 								<img src="{{'assets/img/sample/brastyleguide-4-320-x-320.jpg'|theme}}" srcset="{{'assets/img/sample/brastyleguide-4-320-x-320@2x.jpg 2x'|theme}}", "{{'assets/img/sample/brastyleguide-4-320-x-320@3x.jpg 3x'|theme}}" class="image-02">
@@ -182,7 +230,7 @@ productPage = "product"
 							</div>
 						</div>
 					</div>
-					<div class="column">
+					<div class="column article-column">
 						<div class="rectangle-8">
 							<div class="column">
 								<img src="{{'assets/img/sample/image-02.jpg'|theme}}" srcset="{{'assets/img/sample/image-02@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-02@3x.jpg 3x'|theme}}" class="image-02">
@@ -200,7 +248,7 @@ productPage = "product"
 							</div>
 						</div>
 					</div>
-					<div class="column">
+					<div class="column article-column">
 						<div class="rectangle-8">
 							<div class="column">
 								<img src="{{'assets/img/sample/image-03.jpg'|theme}}" srcset="{{'assets/img/sample/image-03@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-03@3x.jpg 3x'|theme}}" class="image-02">
@@ -218,7 +266,7 @@ productPage = "product"
 							</div>
 						</div>
 					</div>
-					<div class="column">
+					<div class="column article-column">
 						<div class="rectangle-8">
 							<div class="column">
 								<img src="{{'assets/img/sample/image-02.jpg'|theme}}" srcset="{{'assets/img/sample/image-02@2x.jpg 2x'|theme}}", "{{'assets/img/sample/image-02@3x.jpg 3x'|theme}}" class="image-02">
@@ -241,20 +289,6 @@ productPage = "product"
 		</div>
 	</div>
 	{% component 'subscribeform' %}
-	<!-- <div class="rectangle-6">
-		<div class="container">
-			<div class="r6-left">
-				<div class="r6-text-01">Sign up to receive 10% off* your first order</div>
-				<div class="r6-text-02">Everyday! at Huge Discounts in our Designer Clothing Sale</div>
-			</div>
-			<div class="r6-right">
-				<form action="/action_page.php">
-					<input class="subscribe-form" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Sign up for newsletter"><button class="subscribe-submit" type="submit">SUBSCRIBE</button>
-				</form>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div> -->
 
 	{% put scripts %}
 		<script type="text/javascript">
@@ -266,6 +300,18 @@ productPage = "product"
 		      slidesToShow: 5,
 		    });
 		  });
+
+		  if ($(window).width() < 992) {
+		  	$("#responsive-js-1").removeClass('four column row');
+		  	$("#responsive-js-1").addClass('two column row');
+			}
+
+			if ($(window).width() < 767) {
+		  	$("#responsive-js-2").removeClass('tablet-column six wide tablet column');
+		  	$("#responsive-js-2").addClass('tablet-column sixteen wide column');
+		  	$("#responsive-js-1").removeClass('two column row');
+		  	$("#responsive-js-1").addClass('one column row');
+			}
 		</script>
 	{% endput %}
 </div>

@@ -10,7 +10,7 @@
 <div class="footer">
 	<div class="rectangle-1">
 		<div class="container rect-1">
-			<div class="ui three column center aligned divided relaxed stackable grid container">
+			<div id="responsive-js-3" class="ui three column center aligned divided relaxed stackable grid container">
 				<div class="row">
 					<div class="column">
 						<img src="{{'assets/img/icon/gift-anticon.png'|theme}}" srcset="{{'assets/img/icon/gift-anticon@2x.png 2x'|theme}}", "{{'assets/img/icon/gift-anticon@3x.png 3x'|theme}}" class="icon-01">
@@ -28,10 +28,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="footer-lg container">
 		<div class="ui grid">
 			<div class="four wide column">
-				<div class="Behaku"><a href="/oct/">Behaku</a></div>
+				<div class="Behaku"><a href="/">Behaku</a></div>
 				<div class="ft-1-1"> Buy Bras, Panties, Nightwear, Swimwear, Sportswear & Apparel from Behaku - The Online Lingerie & Fashion Destination in Indonesia
 				</div>
 				<div class="ft-1-2">
@@ -44,7 +44,7 @@
 				<div class="ft-2-2">
 					<ul>
 						{% for cat in categories %}
-						<li><a href="/oct/{{cat.slug}}">{{cat.title}}</a></li>
+						<li><a href="/{{cat.slug}}">{{cat.title}}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -54,7 +54,7 @@
 				<div class="ft-3-2">
 					<ul>
 						<!-- <li><a href="">Track/Return Order</a></li> -->
-						<li><a href="/oct/contact">Contact Us</a></li>
+						<li><a href="/contact">Contact Us</a></li>
 						<li><a href="">FAQs</a></li>
 						<li><a href="">Shipping Policy</a></li>
 						<li><a href="">Returns Policy</a></li>
@@ -101,7 +101,7 @@
 		</div>
 		<div class="ui grid">
 			<div class="three column row ft3">
-				<div class="left floated column">
+				<div class="payment-logo-list left floated column">
 					<img src="{{'assets/img/icon/payment-method.png'|theme}}" srcset="{{'assets/img/icon/payment-method@2x.png 2x'|theme}}", "{{'assets/img/icon/payment-method@3x.png 3x'|theme}}" class="icon-footer-03">
 				</div>
 				<div class="right floated column">
@@ -116,10 +116,119 @@
 				</div>
 			</div>
 		</div>
-		<div class="ui two column centered grid">
+		<div class="ui centered grid">
 			<div class="column">
 				<div class="ft4">© Copyright 2017 Behaku. All rights reserved. | Privacy Policy | Terms of Use</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="footer-sm">
+		<div class="ui vertical fluid accordion menu">
+		  <div class="item">
+		    <a class="title">
+		      <div class="Behaku"><a href="/">Behaku</a></div>
+		    </a>
+		    <div class="content">
+		    </div>
+		  </div>
+		  <div class="item">
+		    <a class="title">
+		      <i class="dropdown icon"></i>
+		      SHOP BY CATEGORIES
+		    </a>
+		    <div class="content">
+		      <ul>
+						{% for cat in categories %}
+						<li><a href="/{{cat.slug}}">{{cat.title}}</a></li>
+						{% endfor %}
+					</ul>
+		    </div>
+		  </div>
+		  <div class="item">
+		    <a class="title">
+		      <i class="dropdown icon"></i>
+		      HELP & SUPPORT
+		    </a>
+		    <div class="content">
+		      <ul>
+						<!-- <li><a href="">Track/Return Order</a></li> -->
+						<li><a href="/contact">Contact Us</a></li>
+						<li><a href="">FAQs</a></li>
+						<li><a href="">Shipping Policy</a></li>
+						<li><a href="">Returns Policy</a></li>
+						<li><a href="">Discreet Packaging</a></li>
+						<li><a href="">Disclaimer Policy</a></li>
+					</ul>
+		    </div>
+		  </div>
+		  <div class="item">
+		    <a class="title">
+		      <i class="dropdown icon"></i>
+		      DISCOVER BEHAKU
+		    </a>
+		    <div class="content">
+		      <ul>
+						<li><a href=""><a href="">About Behaku</a></li>
+						<li><a href="">Locate Behaku Studios</a></li>
+						<li><a href="">Our Investors</a></li>
+						<li><a href="">Careers</a></li>
+						<li><a href="">Press Center</a></li>
+						<li><a href="">Become Behaku Champion</a></li>
+					</ul>
+		    </div>
+		  </div>
+		  <div class="item">
+		    <a class="title">
+		      <i class="dropdown icon"></i>
+		      KNOW MORE
+		    </a>
+		    <div class="content">
+		      <ul>
+						<li><a href="">Behaku Collections</a></li>
+						<li><a href="">Bra Size Calculator</a></li>
+						<li><a href="">Behaku Blog</a></li>
+						<li><a href="">Behaku Fit Secrets</a></li>
+						<li><a href="">Find Your Perfect Fit</a></li>
+					</ul>
+		    </div>
+		  </div>
+		</div>
+		<div class="ft2">
+			<div class="ft2-1">100% secure payment</div>
+			<div class="ft2-2">
+				<img src="{{'assets/img/icon/pci-2-x-01.png'|theme}}" srcset="{{'assets/img/icon/pci-2-x-01@2x.png 2x'|theme}}", "{{'assets/img/icon/pci-2-x-01@3x.png 3x'|theme}}" class="icon-footer-02">
+			</div>
+		</div>
+		<div class="payment-logo-list column">
+			<img src="{{'assets/img/icon/payment-method.png'|theme}}" srcset="{{'assets/img/icon/payment-method@2x.png 2x'|theme}}", "{{'assets/img/icon/payment-method@3x.png 3x'|theme}}" class="icon-footer-03">
+		</div>
+		<div class="icon-footer-sm">
+			<i class="icon fa-facebook"></i>
+			<i class="icon fa-instagram"></i>
+			<i class="icon fa-twitter"></i>
+			<i class="icon fa-pinterest"></i>
+			<i class="icon fa-wordpress"></i>
+			<i class="icon fa-youtube-play"></i>
+			<i class="icon fa-linkedin-square"></i>
+			<i class="icon fa-google-plus"></i>
+		</div>
+		<div class="ft4">
+			© Copyright 2017 Behaku. All rights reserved. <br>
+			Privacy Policy | Terms of Use
+		</div>
+	</div>
 </div>
+
+{% put scripts %}
+	<script type="text/javascript">
+		if ($(window).width() < 767) {
+	  	$("#responsive-js-3").removeClass('ui three column center aligned divided relaxed stackable grid container');
+	  	$("#responsive-js-3").addClass('ui three column center aligned relaxed stackable grid container');
+		}
+
+		$('.ui.accordion')
+		  .accordion()
+		;
+	</script>
+{% endput %}

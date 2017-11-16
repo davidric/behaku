@@ -2067,7 +2067,6 @@ timeout:"Your request timed out"},regExp:{required:/\{\$*[A-z0-9]+\}/g,optional:
         if (_.options.vertical === false && _.options.variableWidth === false) {
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
             _.slideWidth = 255;
-            console.log(_.slideWidth);
             _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
 
         } else if (_.options.variableWidth === true) {

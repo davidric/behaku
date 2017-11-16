@@ -47,3 +47,29 @@
   min-height: 2.71428571em;  
   padding: .78571429em 2.1em .78571429em 1em;
 }
+
+@media only screen and (max-width: 991px) {
+  .contact-page {
+    .best-title {
+      width: 35.5%;
+    }
+    .Line-1, .Line-2 {
+      width: 31.5%;
+    }
+    .cp-2 h2 {
+      font-size: 28px;
+    }
+    .Shop-our-latest-tren {
+      width: 80%;
+      margin: 9px auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-page {
+    .cp-2 {
+      margin-top: 42px;
+    }
+  }
+}

@@ -134,3 +134,69 @@
 .category-page .Line-1, .category-page .Line-2 {
   width: 40%;
 }
+
+.title-page {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .category-page {
+    .best-frames {
+      margin-top: 21px;
+    }
+    .frame-1 {
+      margin-bottom: 26px;
+    }
+    .best-title {
+      width: 30.5%;
+    }
+    .Line-1, .Line-2 {
+      width: 34%;
+    }
+    .btn-01 {
+      margin-top: 18px;
+    }
+    .intro {
+      margin-bottom: 51px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .category-page {
+    .title-page {
+      display: block;
+      text-transform: uppercase;
+      font-family: Palatino;
+      font-size: 17px;
+      font-weight: bold;
+      color: #575757;
+      padding: 9px 0;
+      text-align: center;
+    }
+    .image-slider-cat {
+      height: 182px;
+      object-fit: cover;
+      object-position: 100%;
+    }
+    .best-frames .frame-1, .image-1 {
+      width: 100%;
+    }
+    .image-1 {
+      margin: 0;
+      padding: 4px 4px 0 4px;
+    }
+    .cr1t1, .cr1t2-1 {
+      font-weight: bold;
+    }
+    .ui.grid>.row>.column.column-left {
+      padding-right: .5rem;
+    }
+    .ui.grid>.row>.column.column-right {
+      padding-left: .5rem;
+    }
+    .btn-01 {
+      margin-top: 10px;
+    }
+  }
+}

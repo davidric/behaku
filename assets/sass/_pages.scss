@@ -85,3 +85,92 @@ body {
   color: #a5a5a5;
   font-weight: normal;
 }
+
+/* Media Query */
+
+@media only screen and (max-width: 991px) {
+	.container {
+		width: 737px;
+	}
+	.item-container {
+		width: 677px;
+	}
+	.title-3 {
+		font-size: 14px!important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.container {
+		width: 100%;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.item-container {
+		width: 100%!important;
+		padding-right: 1rem;
+		padding-left: 1rem;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.profile-container {
+		width: 100%;
+	}
+	.Line-1, .Line-2 {
+		display: none;
+	}
+	.best-title {
+		width: 100% !important;
+	}
+	.Shop-our-latest-tren {
+		margin-top: 7px;
+	}
+	.best-frames {
+		margin-top: 23px;
+	}
+	.Rectangle-7 {
+    min-height: 107px;
+  }
+  .image-1 {
+    height: 257px;
+  }
+}
+
+/* Iphone 6 above */
+@media only screen and (max-width: 375px) {
+	.homepage {
+		.subscribe-form {
+			width: 67.7%;
+		}
+		.subscribe-submit {
+			width: 31.7%;
+		}
+		.frame-2-content {
+			min-width: 168px;
+		}
+		.hr-inline.hi2 {
+			width: 67%;
+		}
+	}
+	.item-page .slick-prev, .item-page .slick-next {
+		max-width: 49px;
+	}
+}
+
+@media only screen and (max-width: 340px) {
+	.homepage .hr-inline.hi2 {
+		width: 60%;
+	}
+	.homepage .subscribe-submit {
+		width: 37.7%;
+	}
+	.homepage .subscribe-form {
+		width: 61.7%;
+	}
+	.image-1 {
+		height: 200px;
+	}
+	.Rectangle-7 {
+		min-height: 123px;
+	}
+}

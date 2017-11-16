@@ -124,3 +124,115 @@
   color: #a5a5a5;
   margin-left: 31px;
 }
+
+.footer-sm {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    .ui.grid>[class*="three column"].row>.column.payment-logo-list {
+      width: 320px!important;
+    }
+    .icon-01, .r1-text-01 {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .r1-text-01 {
+      font-size: 17px;
+      margin-top: 9px;
+    }
+    .rectangle-1 .column {
+      display: block !important;
+    }
+    .rectangle-1 .row {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #responsive-js-3 .column {
+      padding-top: 25px!important;
+    }
+    #responsive-js-3 .column:first-child {
+      padding-top: 30px!important;
+    }
+    #responsive-js-3 .column:last-child {
+      padding-bottom: 51px!important;
+    }
+    .r1-text-01 {
+      margin-top: 11px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    .footer-lg {
+      display: none;
+    }
+    .footer-sm {
+      display: block;
+    }
+    .ui.accordion.menu .item .title {
+      font-family: Helvetica;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.77;
+      color: #575757;
+    }
+    .ui.accordion.menu {
+      border: none;
+      border-bottom: 1px solid rgba(34,36,38,.15);
+      box-shadow: none;
+      margin-bottom: 30px;
+    }
+    .rectangle-1 {
+      margin-bottom: 14px;
+    }
+    .ft2 {
+      float: none;
+      border-bottom: 1px solid rgba(34,36,38,.15);
+      padding-bottom: 30px;
+    }
+    .ft2-1 {
+      text-align: center;
+    }
+    .icon-footer-02 {
+      float: none;
+    }
+    .ft2-2 {
+      text-align: center;
+    }
+    .payment-logo-list {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(34,36,38,.15);
+    }
+    .icon-footer-sm {
+      text-align: center;
+      padding-top: 1rem;
+      i.icon {
+        font-size: 18px;
+        color: #a5a5a5;
+      }
+    }
+    .ft4 {
+      max-width: 280px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 11px;
+      margin-bottom: 17px;
+    }
+    .footer-sm ul {
+      padding-left: 1rem;
+      list-style: none;
+      margin-top: .3rem;
+    }
+    .footer-sm ul a {
+      font-family: Helvetica;
+      line-height: 1.77;
+      color: #a5a5a5;
+    }
+  }
+}

@@ -3,13 +3,6 @@ url = "/:category/:slug"
 layout = "default"
 is_hidden = 0
 
-[builderDetails]
-modelClass = "Behaku\Products\Models\Product"
-identifierValue = "{{ :slug }}"
-modelKeyColumn = "slug"
-displayColumn = "name"
-notFoundMessage = "Record not found"
-
 [myProducts]
 category = "{{:category}}"
 perPage = 12

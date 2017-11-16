@@ -131,3 +131,31 @@
     left: 0.7rem;
     font-size: 7px;
 }
+
+.header .icon-rect span:last-child {
+  margin-right: 0;
+}
+
+
+/* Media Query */
+
+@media only screen and (max-width: 991px) {
+  .header {
+    .-Off-ALL-Bras-3 {
+      float: none;
+      text-align: center;
+    }
+    .icon-rect-2 {
+      display: none;
+    }
+    
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    .-Off-ALL-Bras-3 span {
+      display: none;
+    }
+  }
+}

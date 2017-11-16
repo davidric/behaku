@@ -13,7 +13,7 @@ function onStart() {
 <div class="header">
 	<div class="Rectangle-2">
 		<div class="container">
-			<div class="-Off-ALL-Bras-3">40% Off ALL Bras | 3 FREE Panties when you buy 2 DETAILS | Sexy Sale up to 70% Off</div>
+			<div class="-Off-ALL-Bras-3">40% Off ALL Bras | 3 FREE Panties when you buy 2 DETAILS <span>| Sexy Sale up to 70% Off</span></div>
 			<div class="icon-rect-2">
 				<img src="{{'assets/img/icon/shop-anticon.png'|theme}}" srcset="{{'assets/img/icon/shop-anticon@2x.png 2x'|theme}}, {{'assets/img/icon/shop-anticon@3x.png 3x'|theme}}" class="shop---anticon">
 				<img src="{{'assets/img/icon/location-pin-simple-line-icons.png'|theme}}"
@@ -30,7 +30,7 @@ function onStart() {
 	<div class="Rectangle">
 		<div class="container">
 			<img src="{{'assets/img/icon/menu.svg'|theme}}" class="menu">
-			<div class="Behaku"><a href="/oct/">Behaku</a></div>
+			<div class="Behaku"><a href="/">Behaku</a></div>
 			<div class="icon-rect">
 				<span class="icon-header" data-tooltip="Search" data-position="bottom left" data-inverted="">
 					<i class="fa fa-search"></i>
@@ -45,8 +45,8 @@ function onStart() {
 			      <div class="column">
 			        <h4 class="ui header">Hi, {{ user.name }}</h4>
 			        <div class="ui link list">
-			          <a class="item" href="/oct/profile">My Profile</a>
-			          <a class="item" href="/oct/my-orders">My Orders</a>
+			          <a class="item" href="/profile">My Profile</a>
+			          <a class="item" href="/my-orders">My Orders</a>
 			          <div class="ui divider"></div>
 			          <a class="item" href="#" data-request="onLogout" data-request-data="redirect: '/'">Sign Out</a>
 			        </div>
@@ -144,5 +144,13 @@ $('.user-dropdown')
     }
   })
 ;
+</script>
+<script>
+	if ($(window).width() < 992) {
+  	$(".login").removeClass('ui tiny modal');
+  	$(".register").removeClass('ui tiny modal');
+  	$(".login").addClass('ui small modal');
+  	$(".register").addClass('ui small modal');
+	}
 </script>
 {% endput %}
