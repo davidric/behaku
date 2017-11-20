@@ -198,5 +198,16 @@
     .btn-01 {
       margin-top: 10px;
     }
+    .Rectangle-7 {
+      min-height: 107px;
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .category-page {
+    .Rectangle-7 {
+      min-height: 123px;
+    }
   }
 }

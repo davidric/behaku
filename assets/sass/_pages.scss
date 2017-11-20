@@ -116,6 +116,14 @@ body {
 	.profile-container {
 		width: 100%;
 	}
+	.ui.grid {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.ui.grid>.column:not(.row), .ui.grid>.row>.column {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	.Line-1, .Line-2 {
 		display: none;
 	}
@@ -128,9 +136,6 @@ body {
 	.best-frames {
 		margin-top: 23px;
 	}
-	.Rectangle-7 {
-    min-height: 107px;
-  }
   .image-1 {
     height: 257px;
   }
@@ -153,8 +158,11 @@ body {
 		}
 	}
 	.item-page .slick-prev, .item-page .slick-next {
-		max-width: 49px;
+		max-width: 51px;
 	}
+	.category-page .image-slider-cat {
+    object-position: 96% !important;
+  }
 }
 
 @media only screen and (max-width: 340px) {
@@ -167,10 +175,13 @@ body {
 	.homepage .subscribe-form {
 		width: 61.7%;
 	}
-	.image-1 {
+	.category-page .image-1 {
 		height: 200px;
 	}
-	.Rectangle-7 {
-		min-height: 123px;
+	.category-page .image-slider-cat {
+    object-position: 91% !important;
+  }
+  .item-page .slick-prev, .item-page .slick-next {
+		max-width: 49px;
 	}
 }

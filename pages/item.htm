@@ -20,4 +20,21 @@ category = "{{ :category }}"
 categoryPage = "products"
 ==
 <!-- {% component "myBreadcrumbsProduct" %} -->
-{% component "myProductDetail" %}
+<div class="item-page">
+	{% component "myProductDetail" %}
+	<div class="ui small modal purchase">
+		<i class="close icon"></i>
+		<div id='modal-wrapper'>
+			{% partial 'myBasket::basket-popup' %}
+		</div>
+	</div>
+</div>
+
+{% put scripts %}
+<script>
+	$('.add-to-cart-item').click(function(){
+		$('.ui.modal.purchase').modal('show');
+		$('.ui.modal.purchase').addClass('active scrolling');
+	});
+</script>
+{% endput %}
