@@ -4,13 +4,25 @@ code = "main-menu"
 [viewBag]
 ==
 <?php
-
-function onStart() {
-    
-}
+	use Jiri\Jkshop\Models\Category;
+	function onStart(){
+		$this['category'] = Category::orderBy('id','desc')->paginate(3);
+		$this['categories'] = Category::get();
+	}
 ?>
 ==
 <div class="header">
+	<div class="ui vertical sidebar menu left" id="toc" style="">
+		<div class="item">
+			<!-- <img src="{{'assets/img/icon/menu.svg'|theme}}" class="view-ui item"> -->
+			<i class="large arrow left icon view-ui"></i>
+		  <div class="Behaku sidebar-logo"><a href="/">Behaku</a></div>
+		</div>
+		{% for cat in categories %}
+		<a class="item" href="/{{cat.slug}}"><b>{{cat.title}}</b></a>
+		{% endfor %}
+	</div>
+
 	<div class="Rectangle-2">
 		<div class="container">
 			<div class="-Off-ALL-Bras-3">40% Off ALL Bras | 3 FREE Panties when you buy 2 DETAILS <span>| Sexy Sale up to 70% Off</span></div>
@@ -29,7 +41,7 @@ function onStart() {
 
 	<div class="Rectangle">
 		<div class="container">
-			<img src="{{'assets/img/icon/menu.svg'|theme}}" class="menu">
+			<img src="{{'assets/img/icon/menu.svg'|theme}}" class="view-ui item menu">
 			<div class="Behaku"><a href="/">Behaku</a></div>
 			<div class="icon-rect">
 				<span class="icon-header" data-tooltip="Search" data-position="bottom left" data-inverted="">
@@ -127,6 +139,13 @@ function onStart() {
 	$('.register-btn').click(function(){
 		$('.ui.modal.register').modal('show');
 	});
+
+	$('.view-ui').click(function(){
+		$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
+	});
+
+
+	
 </script>
 <script>
 // 	$('.browse.item')
@@ -152,5 +171,12 @@ $('.user-dropdown')
   	$(".login").addClass('ui small modal');
   	$(".register").addClass('ui small modal');
 	}
+
+</script>
+
+<script>
+	$(window).on("scroll touchmove", function () {
+	  $('.header').toggleClass('smaller', $(document).scrollTop() > 0);
+	});
 </script>
 {% endput %}

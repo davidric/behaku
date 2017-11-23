@@ -136,6 +136,58 @@
   margin-right: 0;
 }
 
+.view-ui:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.ui.vertical.menu .item>i.icon.view-ui {
+  float: left!important;
+  line-height: 24px;
+  color: #575757;
+  margin-left: 0;
+}
+
+.ui.vertical.menu .item>.Behaku.sidebar-logo {
+  margin-left: 50px;
+  margin-left: 20%;
+}
+
+.ui.menu b {
+  text-transform: uppercase;
+  color: #575757;
+}
+
+.ui.menu .item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header.smaller {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.header.smaller .Rectangle {
+  position: fixed;
+  top: 0;
+  z-index: 1500;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.11);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  border-bottom: 0;
+}
+
+.header.smaller .Rectangle-2 {
+  margin-bottom: 40px;
+}
+
+.ui.modal {
+  z-index: 3000;
+}
 
 /* Media Query */
 

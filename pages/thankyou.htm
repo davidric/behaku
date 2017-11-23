@@ -1,0 +1,45 @@
+title = "Thankyou"
+url = "/thankyou"
+layout = "default"
+is_hidden = 0
+==
+<div class="thankyou-page">
+	<div class="container">
+		<div class="basket-page basket-1">
+		  <div class="container">
+		    <div class="ui grid">
+		      <div class="eight wide centered column">
+		        <div class="span12">
+		          <div class="cart-step">
+		            <span class="step-sign sign1 "><span class="step-text">Purchased Details</span></span>
+		            <span class="step-sign sign2 "><span class="step-text ta-center">Payment Method</span></span>
+		            <span class="step-sign sign3 active"><span class="step-text">Payment Order</span></span>
+		            <div class=""></div>
+		            <div class="step-bar"></div>
+		          </div>
+		        </div>
+		        <div class="clearfix"></div>  
+		        <div class="tp-1">
+		        	<div class="tp-1-1">Thank you for your order</div>
+		        	<div class="tp-1-2">You make a payment via <strong>BNI transfer</strong>. Please complete your payment in time</div>
+		        </div> 
+		        <div class="ui divider"></div>     
+		        <div class="tp-2">
+		        	<div class="tp-2-1">Total Purchase</div>
+		        	<div class="tp-2-2">{{ basket.total_price_with_shipping_formatted }}{{ order.total_price + order.shipping_price }}</div>
+		        	<div class="test">Test: {{ order.id }} {{ order.total_price + order.shipping_price }} </div>
+		        </div> 
+		        <div class="ui divider"></div>
+		        <div class="tp-3">
+		        	<div class="tp-1-1">Thank you for your order</div>
+		        </div>
+		        <div class="ui divider"></div>
+		        <div class="tp-4">
+		        	<div class="tp-1-1">Thank you for your order</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>

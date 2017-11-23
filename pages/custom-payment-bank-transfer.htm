@@ -1,0 +1,99 @@
+title = "Custom Payment Bank Transfer"
+url = "/payment/:slug"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeUrl[cz] = "/custom-payment-cash-delivery"
+
+[myCustomPaymentCashOnDelivery]
+slug = "{{ :slug }}"
+==
+<div class="thankyou-page">
+	<div class="container">
+    <div class="ui grid">
+      <div class="eight wide centered column">
+      	<div class="basket-page">
+	        <div class="span12">
+	          <div class="cart-step">
+	            <span class="step-sign sign1 "><span class="step-text">Purchased Details</span></span>
+	            <span class="step-sign sign2 "><span class="step-text ta-center">Payment Method</span></span>
+	            <span class="step-sign sign3 active"><span class="step-text">Payment Order</span></span>
+	            <div class=""></div>
+	            <div class="step-bar"></div>
+	          </div>
+	        </div>	
+      	</div>
+        <div class="clearfix"></div>  
+        <div class="tp-1">
+        	<div class="tp-1-1">Thank you for your order</div>
+        	<div class="tp-1-2">You make a payment via <strong>BCA transfer</strong>. Please complete your payment in time</div>
+        </div> 
+        <div class="ui divider"></div>     
+        <div class="tp-2">
+        	<div class="tp-2-1">Total Purchase</div>
+        	<div class="tp-2-2">Rp{{ order.total_price + order.shipping_price }}</div>
+				  <a class="js-copy-price-btn">Copy Nominal</a>
+        </div> 
+        <div class="ui divider"></div>
+        <div class="tp-3">
+        	<div class="tp-3-1">Bank Destination</div>
+        	<div class="tp-3-2"><img src="{{'assets/img/icon/bca.png'|theme}}" alt=""></div>
+        	<div class="tp-3-3">a/n PT. Behaku Indonesia</div>
+        	<div class="tp-3-4">000 000 0000</div>
+        	<a class="js-copy-bank-btn">Copy Bank Account Number</a>
+        </div>
+        <div class="ui divider"></div>
+        <div class="tp-4">
+        	<div class="tp-4-1">To protect your payment, never transfer money or communicate outside of the Behaku Website. <span class="links">Learn more</span></div>
+        	<div class="tp-4-2"><a href="/oct/my-orders"><div class="btn-01">MY ORDER</div></a></div>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+
+{% put scripts %}
+<script>
+	// Copy paste script
+	function copyTextToClipboard(text) {
+	  var textArea = document.createElement("textarea");
+	  // Place in top-left corner of screen regardless of scroll position.
+	  textArea.style.position = 'fixed';
+	  textArea.style.top = 0;
+	  textArea.style.left = 0;
+	  // Ensure it has a small width and height. Setting to 1px / 1em
+	  // doesn't work as this gives a negative w/h on some browsers.
+	  textArea.style.width = '2em';
+	  textArea.style.height = '2em';
+	  // We don't need padding, reducing the size if it does flash render.
+	  textArea.style.padding = 0;
+	  // Clean up any borders.
+	  textArea.style.border = 'none';
+	  textArea.style.outline = 'none';
+	  textArea.style.boxShadow = 'none';
+	  // Avoid flash of white box if rendered for any reason.
+	  textArea.style.background = 'transparent';
+	  textArea.value = text;
+	  document.body.appendChild(textArea);
+	  textArea.select();
+	  try {
+	    var successful = document.execCommand('copy');
+	    var msg = successful ? 'successful' : 'unsuccessful';
+	    console.log('Copying text command was ' + msg);
+	  } catch (err) {
+	    console.log('Oops, unable to copy');
+	  }
+	  document.body.removeChild(textArea);
+	}
+	var copyPriceBtn = document.querySelector('.js-copy-price-btn');
+	copyPriceBtn.addEventListener('click', function(event) {
+	  copyTextToClipboard({{ order.total_price + order.shipping_price }});
+	});
+	var copyBankBtn = document.querySelector('.js-copy-bank-btn');
+	copyBankBtn.addEventListener('click', function(event) {
+	  copyTextToClipboard('0000000000');
+	});
+	// Copy paste end
+</script>
+{% endput %}

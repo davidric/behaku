@@ -29,7 +29,9 @@ redirect = "home"
         <tr>
 		      <td><a href="{{ order.url }}">{{ order.id }}</a></td>
 		      <td>{{ order.created_at|date("d/m/Y") }}</td>
-		      <td>{{ jkshopSetting.getPriceFormatted(order.total_price) }}</td>
+		      {% set price_with_shipping = order.total_price + order.shipping_price %}
+		      <td>{{ jkshopSetting.getPriceFormatted(price_with_shipping) }}</td>
+		      <!-- {{ jkshopSetting.getPriceFormatted(order.total_price) }} -->
 		      <td>{% if (order.invoice) %}<a href = '{{order.invoice.path}}' target='_blank'>download</a>{% else %}no invoice{% endif %}</td>
 		    </tr>
 	    {% else %}
