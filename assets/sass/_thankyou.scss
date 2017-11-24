@@ -10,6 +10,7 @@
       font-size: 35px;
       text-align: center;
       color: #575757;
+      font-weight: bold;
     }
     .tp-1-2 {
       font-size: 17px;
@@ -75,6 +76,48 @@
       margin: 0 auto;
       margin-top: 33px;
       margin-bottom: 106px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .thankyou-page {
+    .basket-page {
+      margin-bottom: 129px;
+    }
+    .span12 {
+      margin-bottom: 0;
+    }
+    .tp-1 {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .thankyou-page {
+    .tp-1 .tp-1-1 {
+      font-size: 23px;
+    }
+    .tp-1 .tp-1-2, .tp-2-1, .tp-2-3, .js-copy-price-btn, .js-copy-bank-btn, .tp-2-1, .tp-3-1, .tp-3 .tp-3-3 {
+      font-size: 14px;
+    }
+    .tp-2 .tp-2-2 {
+      font-size: 40px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .tp-2-1, .tp-3-1, .tp-3 .tp-3-1 {
+      margin-top: 25px;
+    }
+    .tp-3 .tp-3-4 {
+      margin-top: 9px;
+    }
+    .tp-3 {
+      margin-bottom: 29px;
+    }
+    .tp-4 .btn-01 {
+      margin-bottom: 64px;
     }
   }
 }

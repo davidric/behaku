@@ -73,13 +73,17 @@
     .basic-field {
       border-left: none;
       border-right: none;
-      border-radius: 0;
       padding-left: 1rem;
       padding-right: 1rem;
     }
     .title-4 {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+  }
+  .profile-page.pure-profile {
+    .basic-field {
+      border-radius: 0;
     }
   }
 }

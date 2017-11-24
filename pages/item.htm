@@ -22,7 +22,7 @@ categoryPage = "products"
 <!-- {% component "myBreadcrumbsProduct" %} -->
 <div class="item-page">
 	{% component "myProductDetail" %}
-	<div class="ui small modal purchase">
+	<div id="ui-modal-purchase" class="ui small modal purchase">
 		<i class="close icon"></i>
 		<div id='modal-wrapper'>
 			{% partial 'myBasket::basket-popup' %}
@@ -36,5 +36,12 @@ categoryPage = "products"
 		$('.ui.modal.purchase').modal('show');
 		$('.ui.modal.purchase').addClass('active scrolling');
 	});
+
+	if ($(window).width() < 992) {
+  	$("#ui-modal-purchase").removeClass('ui small modal purchase');
+  	$("#ui-modal-purchase").addClass('ui fullscreen modal purchase');
+	}
+	if ($(window).width() < 768) {
+	}
 </script>
 {% endput %}

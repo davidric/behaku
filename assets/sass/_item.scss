@@ -365,6 +365,7 @@ ul.slick-dots {
       line-height: 1.4;
       font-size: 20px;
       color: #575757;
+      /*font-weight: bold;*/
     }
     .iw-01 {
       font-size: 15px;
@@ -417,6 +418,8 @@ ul.slick-dots {
     border: solid 1px #dfdfdf;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     padding-left: 1rem;
     &:focus {
       outline: none;
@@ -468,6 +471,9 @@ ul.slick-dots {
   .right-mod-col {
     float: right;
   }
+}
+.basket-content-wrapper .item-wrapper #modal-purchase-1-right .img-responsive {
+  display: none;
 }
 
 @media only screen and (max-width: 991px) {
@@ -614,6 +620,51 @@ ul.slick-dots {
       margin-top: 25px;
     }
   }
+  .basket-content-wrapper {
+    padding: 20px!important;
+    padding-top: 26px!important;
+    padding-bottom: 39px!important;
+    .title-2 {
+      font-size: 20px;
+    }
+    #modal-purchase-1-left {
+      display: none;
+    }
+    .item-wrapper #modal-purchase-1-right .img-responsive {
+      display: block;
+      height: 100px;
+      max-width: 75px;
+      float: left;
+      margin-right: 1rem;
+    }
+    .item-wrapper .title-item-modal {
+      font-size: 1rem;
+      line-height: 1.47;
+      float: left;
+      max-width: 200px;
+    }
+    .btn-01 {
+      margin-top: 21px;
+    }
+    .item-wrapper .total-price-modal {
+      font-size: 16px;
+    }
+  }
+  .total-modal-wrapper {
+    min-height: 0;
+  }
+}
+
+/* Iphone 6 above */
+@media only screen and (max-width: 375px) {
+  .basket-content-wrapper {
+    .item-wrapper .title-item-modal {
+      max-width: 160px;
+    }
+    .item-wrapper .increment-btn .ui.input input {
+      max-width: 35px;
+    }
+  }
 }
 
 @media only screen and (max-width: 340px) {
@@ -629,5 +680,27 @@ ul.slick-dots {
   }
   .increment-btn .ui.input input {
     max-width: 45px;
+  }
+  .basket-content-wrapper {
+    .item-wrapper #modal-purchase-1-right .img-responsive {
+      width: 35%;
+      max-width: 60px;
+      height: 90px;
+    }
+    .item-wrapper .title-item-modal {
+      width: 60%;
+    }
+  }
+  .total-modal-wrapper .coupon-form {
+    width: 106px;
+  }
+  .total-modal-wrapper .coupon-submit {
+    font-weight: normal;
+    width: 102px;
+    font-size: 12px;
+    /*line-height: 2.3;*/
+  }
+  .icon-footer-01 {
+    width: 49%;
   }
 }

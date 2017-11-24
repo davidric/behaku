@@ -172,7 +172,7 @@
 .header.smaller .Rectangle {
   position: fixed;
   top: 0;
-  z-index: 1500;
+  z-index: 1000;
   width: 100%;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.11);
   box-shadow: 0 1px 3px rgba(0,0,0,0.11);
@@ -186,7 +186,7 @@
 }
 
 .ui.modal {
-  z-index: 3000;
+  z-index: 1500;
 }
 
 /* Media Query */
